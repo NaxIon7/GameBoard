@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Imagen</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* Fondo gris claro */
+        }
+
+        #image-container {
+            max-width: 80%;  /* El contenedor ocupa como máximo el 80% del ancho de la pantalla */
+            max-height: 90%; /* El contenedor ocupa como máximo el 90% del alto de la pantalla */
+            overflow: hidden; /* Oculta cualquier desbordamiento */
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Sombras suaves */
+            border-radius: 10px; /* Bordes redondeados */
+            text-align: center;
+        }
+
+        #image-container img {
+            width: 100%;  /* La imagen ocupa el 100% del contenedor */
+            height: auto; /* Mantiene la proporción original de la imagen */
+            cursor: zoom-in; /* Cambia el cursor cuando esté sobre la imagen */
+        }
+
+        #image-container img:active {
+            cursor: zoom-out; /* Cambia el cursor al hacer zoom */
+            width: auto;
+            height: auto;
+            max-width: none;
+            max-height: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="image-container">
+        <img src="periodico.png" alt="Imagen del Periódico">
+    </div>
+
+</body>
+</html>
